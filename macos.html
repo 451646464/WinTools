@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>macOS Terminal Commands &amp; Tools — Full Reference | WinTools</title>
+  <meta name="description" content="A complete, searchable reference for macOS: Terminal basics, defaults tweaks, Homebrew, networking, Time Machine, Disk Utility and the developer toolchain — every option and a copy-ready example.">
+  <meta name="keywords" content="macos commands, mac terminal, homebrew, defaults, screencapture, diskutil, tmutil, launchctl, brew, apple silicon, mac commands">
+  <meta name="theme-color" content="#07070a">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="macOS Terminal Commands &amp; Tools — Full Reference">
+  <meta property="og:description" content="Every macOS Terminal command and built-in tool explained with all options and examples.">
+  <meta property="og:image" content="assets/img/background.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main class="page-main page-body" id="main">
+    <section class="hero" style="padding-bottom:44px;">
+      <div class="hero-inner">
+        <span class="hero-badge"><span class="dot"></span> macOS command &amp; tool library</span>
+        <h1>macOS Terminal, <span class="accent">demystified.</span></h1>
+        <p class="lead">Everyday shell commands, the powerful <span class="mono">defaults</span> tweaks, Homebrew package management, backups, disk tools and the developer toolchain — all explained with every option and copy-ready examples.</p>
+        <div class="hero-chips" style="justify-content:center;">
+          <span class="chip"><span class="hash-mark">#</span> Files</span>
+          <span class="chip"><span class="hash-mark">#</span> Defaults</span>
+          <span class="chip"><span class="hash-mark">#</span> Homebrew</span>
+          <span class="chip"><span class="hash-mark">#</span> Networking</span>
+          <span class="chip"><span class="hash-mark">#</span> Developer</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:12px;">
+      <div class="container">
+        <div class="cmd-toolbar">
+          <div class="cmd-search">
+            <span class="icon" data-icon="search"></span>
+            <input class="input" id="macSearch" type="search" placeholder="Search commands or tools — e.g. brew, defaults, screencapture, diskutil…" aria-label="Search macOS commands">
+          </div>
+          <div class="cmd-chips" id="macChips" role="group" aria-label="Filter by category"></div>
+        </div>
+
+        <div class="cmd-meta">
+          <div class="cmd-count" id="macCount"></div>
+          <div class="cmd-actions">
+            <button class="btn btn-ghost btn-sm" type="button" id="macExpand">Expand all</button>
+            <button class="btn btn-ghost btn-sm" type="button" id="macCollapse">Collapse all</button>
+          </div>
+        </div>
+
+        <div class="cmd-list" id="macList"></div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <div class="panel" style="padding:32px;">
+          <h3 style="font-size:20px;">Opening Terminal on a Mac</h3>
+          <p class="muted" style="margin-top:10px;">Press <span class="mono">⌘ + Space</span> to open Spotlight, type <strong>Terminal</strong> and press Enter. You can also find it under <em>Applications → Utilities → Terminal</em>. Most commands here use the default <span class="mono">zsh</span> shell (macOS Catalina and later). To install extra tools, first install Homebrew with the command shown in the “Packages &amp; Apps” category, then use <span class="mono">brew install</span> for anything you need.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/chrome.js"></script>
+  <script src="assets/js/browser.js"></script>
+  <script src="assets/js/data/macos.js"></script>
+  <script src="assets/js/pages/os.js"></script>
+</body>
+</html>

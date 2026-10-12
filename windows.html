@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Windows Commands, Tools &amp; Run Shortcuts — Full Reference | WinTools</title>
+  <meta name="description" content="A complete, searchable reference for Windows: Run-dialog (Win+R) shortcuts, CMD, PowerShell, networking, disk, system troubleshooting and admin tools — every option and a copy-ready example.">
+  <meta name="keywords" content="windows commands, run commands, win+r, cmd, powershell, task manager, regedit, services.msc, ipconfig, netstat, robocopy, sfc, dism">
+  <meta name="theme-color" content="#07070a">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Windows Commands, Tools &amp; Run Shortcuts — Full Reference">
+  <meta property="og:description" content="Every Windows command, Run shortcut and built-in tool explained with all options and examples.">
+  <meta property="og:image" content="assets/img/background.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main class="page-main page-body" id="main">
+    <section class="hero" style="padding-bottom:44px;">
+      <div class="hero-inner">
+        <span class="hero-badge"><span class="dot"></span> Windows command &amp; tool library</span>
+        <h1>Windows, from Run box <span class="accent">to PowerShell.</span></h1>
+        <p class="lead">Dozens of Win+R shortcuts, the full CMD and PowerShell toolkit, networking and disk commands, plus the built-in GUI tools — each broken down with every option and a copy-ready example.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="#run">Jump to Run commands</a>
+          <a class="btn btn-ghost on-dark btn-lg" href="#main">Browse everything</a>
+        </div>
+        <div class="hero-chips" style="justify-content:center;">
+          <span class="chip"><span class="hash-mark">#</span> Run (Win+R)</span>
+          <span class="chip"><span class="hash-mark">#</span> CMD</span>
+          <span class="chip"><span class="hash-mark">#</span> PowerShell</span>
+          <span class="chip"><span class="hash-mark">#</span> Networking</span>
+          <span class="chip"><span class="hash-mark">#</span> Admin</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="run" style="padding-top:12px;">
+      <div class="container">
+        <div class="cmd-toolbar">
+          <div class="cmd-search">
+            <span class="icon" data-icon="search"></span>
+            <input class="input" id="winSearch" type="search" placeholder="Search commands, Run shortcuts or tools — e.g. regedit, ipconfig, powershell…" aria-label="Search Windows commands">
+          </div>
+          <div class="cmd-chips" id="winChips" role="group" aria-label="Filter by category"></div>
+        </div>
+
+        <div class="cmd-meta">
+          <div class="cmd-count" id="winCount"></div>
+          <div class="cmd-actions">
+            <button class="btn btn-ghost btn-sm" type="button" id="winExpand">Expand all</button>
+            <button class="btn btn-ghost btn-sm" type="button" id="winCollapse">Collapse all</button>
+          </div>
+        </div>
+
+        <div class="cmd-list" id="winList"></div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <div class="panel" style="padding:32px;">
+          <h3 style="font-size:20px;">Run dialog vs. the shells</h3>
+          <p class="muted" style="margin-top:10px;">The <strong>Run dialog</strong> (<span class="mono">Win+R</span>) launches a program or opens a location instantly — perfect for one-liners like <span class="mono">regedit</span>, <span class="mono">services.msc</span> or <span class="mono">shell:startup</span>. The <strong>Command Prompt</strong> (CMD) and <strong>PowerShell</strong> are full shells where you run sequences of commands, pipe output and script tasks. Many Run entries also work as commands inside either shell. Press <span class="mono">Win+X</span> (or right-click Start) for quick access to both shells and admin tools.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/chrome.js"></script>
+  <script src="assets/js/browser.js"></script>
+  <script src="assets/js/data/windows.js"></script>
+  <script src="assets/js/pages/os.js"></script>
+</body>
+</html>

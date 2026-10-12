@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About &amp; Project | WinTools</title>
+  <meta name="description" content="About WinTools — what it covers, how it is built, the safety notice for destructive commands, and the developer behind the project.">
+  <meta name="keywords" content="about wintools, command reference, developer, rakan almoliki, safety, coverage">
+  <meta name="theme-color" content="#07070a">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About WinTools">
+  <meta property="og:description" content="What WinTools covers, how it works, and who built it.">
+  <meta property="og:image" content="assets/img/background.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main class="page-main page-body" id="main">
+    <section class="hero" style="padding-bottom:44px;">
+      <div class="hero-inner">
+        <span class="hero-badge"><span class="dot"></span> About the project</span>
+        <h1>Built to make the <span class="accent">terminal approachable.</span></h1>
+        <p class="lead">WinTools is a free, static reference that explains the commands and tools of Linux, Windows and macOS in plain language — with every option and a working example, so you can learn by doing.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:12px;">
+      <div class="container">
+        <div class="grid grid-3">
+          <div class="card" data-reveal>
+            <div class="card-icon" data-icon="terminal"></div>
+            <h3>What it is</h3>
+            <p>A hand-curated, searchable library of the most useful commands and built-in tools for the three major desktop platforms, grouped by category and written for humans.</p>
+          </div>
+          <div class="card" data-reveal>
+            <div class="card-icon" data-icon="file"></div>
+            <h3>How it works</h3>
+            <p>A plain static site — HTML, CSS and JavaScript only. No framework, no build step, no backend and no analytics. It loads fast, works offline and respects your privacy.</p>
+          </div>
+          <div class="card" data-reveal>
+            <div class="card-icon" data-icon="tools"></div>
+            <h3>Why it exists</h3>
+            <p>Command references are often terse or incomplete. WinTools pairs a clean syntax line with a full option breakdown and real examples, so a beginner and a pro both get value.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="coverage">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Coverage &amp; scope</span>
+          <h2 class="section-title">What is <span class="accent">included</span></h2>
+          <p class="section-sub">Each platform page is grouped into clear categories so you can scan or search.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Linux &amp; Kali</h3>
+            <p>Files &amp; directories · Text &amp; search · System &amp; processes · Networking · Packages (apt, dnf, pacman) · Disk &amp; filesystems · Permissions &amp; users · Archives · Kali security tools (nmap, hydra, john, hashcat, sqlmap, Metasploit, aircrack-ng, and more).</p>
+          </div>
+          <div class="card">
+            <h3>Windows</h3>
+            <p>Run dialog (Win+R) shortcuts · Command Prompt (CMD) · PowerShell cmdlets · Networking (ipconfig, netstat, netsh) · Files &amp; disk (chkdsk, diskpart, robocopy, sfc, DISM) · System &amp; troubleshooting · Admin &amp; services.</p>
+          </div>
+          <div class="card">
+            <h3>macOS</h3>
+            <p>Files &amp; directories · Text &amp; search · System &amp; processes · Networking · Packages &amp; apps (Homebrew, mas, softwareupdate) · macOS-specific (defaults, screencapture, Disk Utility, Time Machine) · Developer (git, Xcode tools).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="disclaimer">
+      <div class="container">
+        <div class="panel" style="padding:36px; border-color: rgba(255,176,32,0.4);">
+          <h3 style="font-size:22px; color:var(--warn);">⚠ Safety notice</h3>
+          <p class="muted" style="margin-top:12px;">Some commands can permanently delete data, overwrite disks or change how a system behaves — for example <span class="mono">rm -rf</span>, <span class="mono">mkfs</span> and <span class="mono">dd</span> on Linux/macOS, or <span class="mono">diskpart</span>, <span class="mono">format</span> and <span class="mono">clean</span> on Windows. Security tools such as <span class="mono">nmap</span>, <span class="mono">hydra</span> and <span class="mono">sqlmap</span> are intended for systems you own or are explicitly authorised to test.</p>
+          <p class="muted" style="margin-top:12px;">Always read the full option list before running a command, prefer a non-destructive flag first, back up important data, and practise in a virtual machine or on test data when you are learning. The examples here are for education — you are responsible for how you use them.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dev">
+      <div class="container">
+        <div class="section-head center">
+          <span class="kicker">Developer</span>
+          <h2 class="section-title">Designed &amp; built by <span class="accent">Rakan Almoliki</span></h2>
+          <p class="section-sub">A privacy-first, no-nonsense reference — designed, developed and maintained with care.</p>
+        </div>
+        <div class="grid grid-2" style="max-width:760px; margin-inline:auto;">
+          <a class="card" href="https://github.com/451646464" target="_blank" rel="noopener" data-reveal style="text-align:center;">
+            <div class="card-icon" data-icon="github" style="margin-inline:auto;"></div>
+            <h3>GitHub</h3>
+            <p>Explore the source and other projects.</p>
+          </a>
+          <a class="card" href="mailto:rakanalmoliki33@gmail.com" data-reveal style="text-align:center;">
+            <div class="card-icon" data-icon="terminal" style="margin-inline:auto;"></div>
+            <h3>Contact</h3>
+            <p>Questions or feedback? Send an email.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/chrome.js"></script>
+  <script src="assets/js/pages/home.js"></script>
+</body>
+</html>

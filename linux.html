@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linux &amp; Kali Commands — Full Reference with All Options | WinTools</title>
+  <meta name="description" content="A complete, searchable reference for Linux and Kali commands: files, text processing, processes, networking, packages, permissions, archives and security tools — every option and a copy-ready example.">
+  <meta name="keywords" content="linux commands, kali linux, ls, grep, find, chmod, apt, systemd, nmap, hydra, metasploit, bash reference">
+  <meta name="theme-color" content="#07070a">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Linux &amp; Kali Commands — Full Reference">
+  <meta property="og:description" content="Every Linux and Kali command explained with all options and copy-ready examples.">
+  <meta property="og:image" content="assets/img/background.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main class="page-main page-body" id="main">
+    <section class="hero" style="padding-bottom:44px;">
+      <div class="hero-inner">
+        <span class="hero-badge"><span class="dot"></span> Linux &amp; Kali command library</span>
+        <h1>Linux commands, <span class="accent">fully explained.</span></h1>
+        <p class="lead">From first steps to security tooling — every command here is broken down with its syntax, every option and flag, and copy-ready examples. Search as you type, filter by category, and expand a card to go deeper.</p>
+        <div class="hero-chips" style="justify-content:center;">
+          <span class="chip"><span class="hash-mark">#</span> Files</span>
+          <span class="chip"><span class="hash-mark">#</span> Text</span>
+          <span class="chip"><span class="hash-mark">#</span> System</span>
+          <span class="chip"><span class="hash-mark">#</span> Networking</span>
+          <span class="chip"><span class="hash-mark">#</span> Packages</span>
+          <span class="chip"><span class="hash-mark">#</span> Kali security</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:12px;">
+      <div class="container">
+        <div class="cmd-toolbar">
+          <div class="cmd-search">
+            <span class="icon" data-icon="search"></span>
+            <input class="input" id="linuxSearch" type="search" placeholder="Search commands, options or examples — e.g. grep, recursive, port scan…" aria-label="Search Linux commands">
+          </div>
+          <div class="cmd-chips" id="linuxChips" role="group" aria-label="Filter by category"></div>
+        </div>
+
+        <div class="cmd-meta">
+          <div class="cmd-count" id="linuxCount"></div>
+          <div class="cmd-actions">
+            <button class="btn btn-ghost btn-sm" type="button" id="linuxExpand">Expand all</button>
+            <button class="btn btn-ghost btn-sm" type="button" id="linuxCollapse">Collapse all</button>
+          </div>
+        </div>
+
+        <div class="cmd-list" id="linuxList"></div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <div class="panel" style="padding:32px;">
+          <h3 style="font-size:20px;">New to the terminal?</h3>
+          <p class="muted" style="margin-top:10px;">A command is made of the program name plus options and arguments, for example <span class="mono">ls -la /var/log</span>. Here <span class="mono">ls</span> is the program, <span class="mono">-la</span> are options (long format + all files) and <span class="mono">/var/log</span> is the target path. Options starting with a single dash are short flags; those with a double dash (e.g. <span class="mono">--max-depth</span>) are long flags. Run <span class="mono">man COMMAND</span> or <span class="mono">COMMAND --help</span> on your system for the official manual.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/chrome.js"></script>
+  <script src="assets/js/browser.js"></script>
+  <script src="assets/js/data/linux.js"></script>
+  <script src="assets/js/pages/os.js"></script>
+</body>
+</html>
