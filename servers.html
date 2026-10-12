@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Server Administration Commands — Web, DB, Windows Server, Docker | WinTools</title>
+  <meta name="description" content="A complete, searchable reference for server administration: Nginx and Apache, MySQL/PostgreSQL, Windows Server roles (AD, DNS, DHCP, IIS), Docker containers, services, cron, monitoring and backups.">
+  <meta name="keywords" content="server commands, nginx, apache, certbot, mysql, psql, pg_dump, windows server, active directory, dns, dhcp, iis, docker, docker compose, systemd, cron, rsync, backup, monitoring">
+  <meta name="theme-color" content="#07070a">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Server Administration Commands — Full Reference">
+  <meta property="og:description" content="Web servers, databases, Windows Server, Docker, services, monitoring and backups — every option and example.">
+  <meta property="og:image" content="assets/img/background.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main class="page-main page-body" id="main">
+    <section class="hero" style="padding-bottom:44px;">
+      <div class="hero-inner">
+        <span class="hero-badge"><span class="dot"></span> Server administration library</span>
+        <h1>Run servers <span class="accent">with confidence.</span></h1>
+        <p class="lead">The day-to-day toolkit of a server administrator: web servers (Nginx, Apache, TLS), databases (MySQL, PostgreSQL), Windows Server roles (Active Directory, DNS, DHCP, IIS), Docker containers, services, scheduled jobs, monitoring and reliable backups — each explained with every option and a working example.</p>
+        <div class="hero-chips" style="justify-content:center;">
+          <span class="chip"><span class="hash-mark">#</span> Web servers</span>
+          <span class="chip"><span class="hash-mark">#</span> Databases</span>
+          <span class="chip"><span class="hash-mark">#</span> Windows Server</span>
+          <span class="chip"><span class="hash-mark">#</span> Docker</span>
+          <span class="chip"><span class="hash-mark">#</span> Services</span>
+          <span class="chip"><span class="hash-mark">#</span> Backups</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:12px;">
+      <div class="container">
+        <div class="cmd-toolbar">
+          <div class="cmd-search">
+            <span class="icon" data-icon="search"></span>
+            <input class="input" id="srvSearch" type="search" placeholder="Search — e.g. nginx, mysqldump, docker, active directory, cron, rsync…" aria-label="Search server commands">
+          </div>
+          <div class="cmd-chips" id="srvChips" role="group" aria-label="Filter by category"></div>
+        </div>
+
+        <div class="cmd-meta">
+          <div class="cmd-count" id="srvCount"></div>
+          <div class="cmd-actions">
+            <button class="btn btn-ghost btn-sm" type="button" id="srvExpand">Expand all</button>
+            <button class="btn btn-ghost btn-sm" type="button" id="srvCollapse">Collapse all</button>
+          </div>
+        </div>
+
+        <div class="cmd-list" id="srvList"></div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <div class="panel" style="padding:32px;">
+          <h3 style="font-size:20px;">A note on running as root / Administrator</h3>
+          <p class="muted" style="margin-top:10px;">Most server commands that change state need elevated privileges — on Linux/macOS prefix them with <span class="mono">sudo</span>, and on Windows Server run PowerShell <strong>as Administrator</strong>. On a real server, prefer a dedicated service account over a full root/admin login, keep services under <span class="mono">systemd</span> or a process manager rather than a bare shell, and always test a restore path before you rely on a backup. Validate config changes (for example <span class="mono">nginx -t</span> or <span class="mono">apache2ctl configtest</span>) before reloading a production service.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/chrome.js"></script>
+  <script src="assets/js/browser.js"></script>
+  <script src="assets/js/data/servers.js"></script>
+  <script src="assets/js/pages/os.js"></script>
+</body>
+</html>

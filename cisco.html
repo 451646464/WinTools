@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cisco Networking Commands — IOS Modes, Show, VLANs, Routing, ACL | WinTools</title>
+  <meta name="description" content="A complete, searchable reference for Cisco IOS: modes and navigation, show commands, interfaces, VLANs and trunking, static & OSPF/EIGRP/RIP routing, ACLs, device security, NAT/DHCP and troubleshooting.">
+  <meta name="keywords" content="cisco commands, cisco ios, show running-config, vlan, trunk, ospf, eigrp, rip, access-list, acl, nat, pat, switchport, port-security, routing, networking, ccna">
+  <meta name="theme-color" content="#07070a">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cisco Networking Commands — Full Reference">
+  <meta property="og:description" content="Every essential Cisco IOS command explained with modes, options and copy-ready examples.">
+  <meta property="og:image" content="assets/img/background.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main class="page-main page-body" id="main">
+    <section class="hero" style="padding-bottom:44px;">
+      <div class="hero-inner">
+        <span class="hero-badge"><span class="dot"></span> Cisco IOS command library</span>
+        <h1>Cisco networking, <span class="accent">mode by mode.</span></h1>
+        <p class="lead">Routers and switches, explained: the EXEC and configuration modes, the essential <span class="mono">show</span> commands, interfaces, VLANs and trunks, static and dynamic routing, ACLs, device security, NAT/DHCP and troubleshooting — each with the exact syntax and copy-ready examples.</p>
+        <div class="hero-chips" style="justify-content:center;">
+          <span class="chip"><span class="hash-mark">#</span> Modes</span>
+          <span class="chip"><span class="hash-mark">#</span> Show</span>
+          <span class="chip"><span class="hash-mark">#</span> VLANs</span>
+          <span class="chip"><span class="hash-mark">#</span> Routing</span>
+          <span class="chip"><span class="hash-mark">#</span> ACL</span>
+          <span class="chip"><span class="hash-mark">#</span> NAT</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:12px;">
+      <div class="container">
+        <div class="cmd-toolbar">
+          <div class="cmd-search">
+            <span class="icon" data-icon="search"></span>
+            <input class="input" id="ciscoSearch" type="search" placeholder="Search commands — e.g. show run, vlan, ospf, access-list, switchport…" aria-label="Search Cisco commands">
+          </div>
+          <div class="cmd-chips" id="ciscoChips" role="group" aria-label="Filter by category"></div>
+        </div>
+
+        <div class="cmd-meta">
+          <div class="cmd-count" id="ciscoCount"></div>
+          <div class="cmd-actions">
+            <button class="btn btn-ghost btn-sm" type="button" id="ciscoExpand">Expand all</button>
+            <button class="btn btn-ghost btn-sm" type="button" id="ciscoCollapse">Collapse all</button>
+          </div>
+        </div>
+
+        <div class="cmd-list" id="ciscoList"></div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <div class="panel" style="padding:32px;">
+          <h3 style="font-size:20px;">The four IOS modes</h3>
+          <p class="muted" style="margin-top:10px;">Cisco IOS is hierarchical. You start in <strong>user EXEC</strong> (<span class="mono">Router&gt;</span>), type <span class="mono">enable</span> to reach <strong>privileged EXEC</strong> (<span class="mono">Router#</span>) where all <span class="mono">show</span> and diagnostic commands live, then <span class="mono">configure terminal</span> to enter <strong>global configuration</strong> (<span class="mono">(config)#</span>) for changes. From there, <span class="mono">interface …</span> or <span class="mono">line …</span> drops you into a specific sub-mode. Type <span class="mono">?</span> at any point to see what is available, <span class="mono">end</span> to jump back to <span class="mono">#</span>, and <span class="mono">write memory</span> to save your work before it is lost on reload.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/chrome.js"></script>
+  <script src="assets/js/browser.js"></script>
+  <script src="assets/js/data/cisco.js"></script>
+  <script src="assets/js/pages/os.js"></script>
+</body>
+</html>

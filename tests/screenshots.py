@@ -49,6 +49,8 @@ def main():
             'linux.html': ('linuxList', 'linux.png'),
             'windows.html': ('winList', 'windows.png'),
             'macos.html': ('macList', 'macos.png'),
+            'cisco.html': ('ciscoList', 'cisco.png'),
+            'servers.html': ('srvList', 'servers.png'),
         }
         for page, (listid, out) in os_pages.items():
             driver.set_window_size(1440, 1500)

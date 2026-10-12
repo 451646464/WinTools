@@ -12,6 +12,8 @@
     { page: 'linux', href: 'linux.html', label: 'Linux' },
     { page: 'windows', href: 'windows.html', label: 'Windows' },
     { page: 'macos', href: 'macos.html', label: 'macOS' },
+    { page: 'cisco', href: 'cisco.html', label: 'Cisco' },
+    { page: 'servers', href: 'servers.html', label: 'Servers' },
     { page: 'about', href: 'about.html', label: 'About' }
   ];
 
@@ -42,7 +44,9 @@
     refresh: '<path d="M3 12a9 9 0 0 1 15-6.7L21 8m0 0V3m0 5h-5M21 12a9 9 0 0 1-15 6.7L3 16m0 0v5m0-5h5"/>',
     mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
     info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>',
-    search: '<circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>'
+    search: '<circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>',
+    network: '<rect x="9" y="2.5" width="6" height="5" rx="1"/><rect x="2.5" y="16.5" width="6" height="5" rx="1"/><rect x="15.5" y="16.5" width="6" height="5" rx="1"/><path d="M12 7.5v4M5.5 16.5v-2.5h13v2.5M12 11.5v2.5"/>',
+    server: '<rect x="3" y="3.5" width="18" height="6" rx="1.5"/><rect x="3" y="14.5" width="18" height="6" rx="1.5"/><path d="M7 6.5h.01M7 17.5h.01"/>'
   };
 
   function icon(name) {
@@ -106,11 +110,13 @@
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>' +
       '        </div>' +
       '      </div>' +
-      '      <div class="footer-col"><h4>Operating Systems</h4><ul>' +
+      '      <div class="footer-col"><h4>Platforms</h4><ul>' +
       '        <li><a href="linux.html">Linux &amp; Kali commands</a></li>' +
       '        <li><a href="windows.html">Windows commands</a></li>' +
       '        <li><a href="windows.html#run">Run dialog commands</a></li>' +
       '        <li><a href="macos.html">macOS commands</a></li>' +
+      '        <li><a href="cisco.html">Cisco IOS networking</a></li>' +
+      '        <li><a href="servers.html">Server administration</a></li>' +
       '      </ul></div>' +
       '      <div class="footer-col"><h4>Explore</h4><ul>' +
       '        <li><a href="index.html#library">Command library</a></li>' +

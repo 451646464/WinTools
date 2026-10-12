@@ -36,9 +36,9 @@ for u in sorted(icon_use):
 
 # ---------- 3. DOM-id wiring between HTML and page scripts ----------
 # os.js uses prefix list + suffixes
-prefixes = {'linux':'linux','win':'win','mac':'mac'}
+prefixes = {'linux':'linux','win':'win','mac':'mac','cisco':'cisco','srv':'srv'}
 suffixes = ['List','Count','Search','Chips','Expand','Collapse']
-page_for_prefix = {'linux':'linux.html','win':'windows.html','mac':'macos.html'}
+page_for_prefix = {'linux':'linux.html','win':'windows.html','mac':'macos.html','cisco':'cisco.html','srv':'servers.html'}
 all_html = {h: read(h) for h in html_files}
 for pfx, page in page_for_prefix.items():
     body = all_html[page]
@@ -117,6 +117,7 @@ def js_balance(path):
 
 for jsp in ['assets/js/utils.js','assets/js/chrome.js','assets/js/browser.js',
             'assets/js/data/linux.js','assets/js/data/windows.js','assets/js/data/macos.js',
+            'assets/js/data/cisco.js','assets/js/data/servers.js',
             'assets/js/pages/home.js','assets/js/pages/os.js']:
     err = js_balance(jsp)
     if err: problems.append('JS balance: ' + err)
@@ -130,11 +131,15 @@ def data_stats(path, cats_allowed, label):
     cc = Counter(cats)
     bad = [c for c in cc if c not in cats_allowed]
     if bad: problems.append(f'{label}: unknown categories {bad}')
-    # every entry should have a desc and a syntax nearby (rough check)
-    n_desc = len(re.findall(r"desc:\s*'", s))
-    n_syntax = len(re.findall(r"syntax:\s*'", s))
+    # every entry should have a desc and a syntax (single- or double-quoted)
+    n_desc = len(re.findall(r"desc:\s*['\"]", s))
+    n_syntax = len(re.findall(r"syntax:\s*['\"]", s))
     n_ex = len(re.findall(r"examples:\s*\[", s))
     n_opts = len(re.findall(r"opts:\s*\[", s))
+    if len(entries) != n_desc:
+        problems.append(f'{label}: {len(entries)} entries but {n_desc} desc fields')
+    if len(entries) != n_syntax:
+        problems.append(f'{label}: {len(entries)} entries but {n_syntax} syntax fields')
     notes.append(f'{label}: {len(entries)} commands, {n_desc} desc, {n_syntax} syntax, {n_opts} opts blocks, {n_ex} examples blocks')
     notes.append(f'   categories: ' + ', '.join(f'{k}={v}' for k,v in sorted(cc.items())))
     return len(entries)
@@ -149,15 +154,30 @@ def cats_of(path, var):
 lcats = cats_of('assets/js/data/linux.js','linuxCats')
 wcats = cats_of('assets/js/data/windows.js','winCats')
 mcats = cats_of('assets/js/data/macos.js','macCats')
+ccats = cats_of('assets/js/data/cisco.js','ciscoCats')
+scats = cats_of('assets/js/data/servers.js','serverCats')
 total = 0
 total += data_stats('assets/js/data/linux.js', lcats, 'linux')
 total += data_stats('assets/js/data/windows.js', wcats, 'windows')
 total += data_stats('assets/js/data/macos.js', mcats, 'macos')
+total += data_stats('assets/js/data/cisco.js', ccats, 'cisco')
+total += data_stats('assets/js/data/servers.js', scats, 'servers')
 notes.append(f'TOTAL commands across all platforms: {total}')
+
+# count option rows + example lines to validate the "options & examples" stat
+opt_rows = 0
+ex_lines = 0
+for jsp in ['assets/js/data/linux.js','assets/js/data/windows.js','assets/js/data/macos.js',
+            'assets/js/data/cisco.js','assets/js/data/servers.js']:
+    s = read(jsp)
+    opt_rows += len(re.findall(r"^\s*\['[^']*',\s*'", s, re.M))  # ['flag','desc'] pairs
+    ex_lines += len(re.findall(r"^\s*'", s, re.M))               # rough: quoted list lines
+notes.append(f'approx option/description pairs: {opt_rows}, approx example/quoted lines: {ex_lines}')
 
 # ---------- 6. stray non-English (CJK / Arabic) in content ----------
 cjk = re.compile(r'[\u4e00-\u9fff\u0600-\u06ff\u3040-\u30ff]')
-for jsp in ['assets/js/data/linux.js','assets/js/data/windows.js','assets/js/data/macos.js']:
+for jsp in ['assets/js/data/linux.js','assets/js/data/windows.js','assets/js/data/macos.js',
+            'assets/js/data/cisco.js','assets/js/data/servers.js']:
     for ln, line in enumerate(read(jsp).splitlines(), 1):
         mm = cjk.search(line)
         if mm:

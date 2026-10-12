@@ -4,17 +4,17 @@
 
 # WinTools
 
-**A complete, free reference for Linux, Windows & macOS — commands, tools and Run shortcuts explained in detail.**
+**A complete, free reference for Linux, Windows, macOS, Cisco & Servers — commands, tools and Run shortcuts explained in detail.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows%20%7C%20macOS-ff1f35.svg)](#-what-is-wintools)
-[![Commands](https://img.shields.io/badge/commands-278-e50914.svg)](#-coverage--scope)
+[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows%20%7C%20macOS%20%7C%20Cisco%20%7C%20Servers-ff1f35.svg)](#-what-is-wintools)
+[![Commands](https://img.shields.io/badge/commands-359-e50914.svg)](#-coverage--scope)
 [![Runs 100% offline](https://img.shields.io/badge/offline-100%25%20client--side-2ee6a6.svg)](#-how-it-works)
 [![No tracking](https://img.shields.io/badge/privacy-no%20tracking%20no%20upload-ffb020.svg)](#-privacy)
 
 *Search hundreds of commands, expand any entry to see every option and flag, and copy ready-to-run examples straight to your clipboard — right from your browser.*
 
-[**Live demo**](#-getting-started) · [**Linux & Kali**](linux.html) · [**Windows**](windows.html) · [**macOS**](macos.html) · [**About**](about.html)
+[**Live demo**](#-getting-started) · [**Linux & Kali**](linux.html) · [**Windows**](windows.html) · [**macOS**](macos.html) · [**Cisco**](cisco.html) · [**Servers**](servers.html) · [**About**](about.html)
 
 </div>
 
@@ -43,11 +43,13 @@
 
 ## 🐧 Windows 🍎 What is WinTools?
 
-**WinTools** is a static, offline-friendly website that documents the commands and built-in tools of the three major desktop platforms:
+**WinTools** is a static, offline-friendly website that documents the commands and built-in tools of five platforms:
 
 - **Linux & Kali** — shell essentials, permissions, packages, networking and the security tools that make Kali famous.
 - **Windows** — dozens of **Run-dialog (Win+R)** shortcuts, the full **CMD** and **PowerShell** toolkits, plus the built-in GUI admin tools.
 - **macOS** — Terminal basics, `defaults` tweaks, Homebrew, Time Machine, Disk Utility and the developer toolchain.
+- **Cisco Networking** — IOS modes, the essential `show` commands, interfaces, VLANs & trunks, static/dynamic routing (OSPF, EIGRP, RIP), ACLs, NAT/DHCP and device security.
+- **Server Admin** — web servers (Nginx, Apache, TLS), databases (MySQL, PostgreSQL), Windows Server roles (AD, DNS, DHCP, IIS), Docker, services, cron, monitoring and reliable backups.
 
 Every entry is written for humans: a one-line description, the canonical **syntax**, a table of **every option and flag**, and **copy-ready examples** you can paste straight into a terminal or the Run box. The whole site runs entirely in your browser — there is **no backend, no build step, no sign-up and no tracking**.
 
@@ -78,6 +80,10 @@ Every entry is written for humans: a one-line description, the canonical **synta
 |:---:|:---:|
 | ![Windows](docs/windows.png) | ![macOS](docs/macos.png) |
 
+| Cisco Networking | Server Admin |
+|:---:|:---:|
+| ![Cisco](docs/cisco.png) | ![Servers](docs/servers.png) |
+
 | About |
 |:---:|
 | ![About](docs/about.png) |
@@ -86,7 +92,7 @@ Every entry is written for humans: a one-line description, the canonical **synta
 
 ## 🗂️ Coverage & scope
 
-**278 commands and tools** across **3 platforms**, grouped into clear categories.
+**359 commands and tools** across **5 platforms**, grouped into clear categories.
 
 ### 🐧 Linux & Kali — 102 commands
 | Category | Count | Examples |
@@ -123,6 +129,30 @@ Every entry is written for humans: a one-line description, the canonical **synta
 | macOS Specific | 11 | `defaults` `screencapture` `say` `caffeinate` `osascript` `tmutil` `diskutil` `plutil` `sips` `qlmanage` Finder/Dock tweaks |
 | Developer | 4 | `git` `python3`/`node` `xcrun` Homebrew best practices |
 
+### 🌐 Cisco Networking — 49 commands
+| Category | Count | Examples |
+|---|---:|---|
+| Modes & Navigation | 6 | `enable` `configure terminal` `interface` `line` `write`/`copy run start` context help `?` |
+| Show / Verify | 12 | `show running-config` `show ip int brief` `show version` `show ip route` `show cdp neighbors` `show mac address-table` `show vlan brief` `show arp` `show spanning-tree` |
+| Interfaces | 6 | `ip address` `no shutdown` `description` `speed`/`duplex` `switchport mode access` `switchport trunk` |
+| VLANs & Trunking | 4 | `vlan` `interface vlan` (SVI) `vtp domain`/`mode` `etherchannel`/`port-channel` |
+| Routing | 4 | `ip route` (static) `router ospf` `router eigrp` `router rip` |
+| Access Lists (ACL) | 4 | standard `access-list` extended `access-list` named ACL apply to interface |
+| Device Security | 6 | `enable secret` `line vty` password/login `username` `port-security` `banner` `service password-encryption` |
+| NAT & DHCP | 3 | NAT/PAT `ip dhcp excluded-address` `ip dhcp pool` |
+| Troubleshooting | 4 | `ping`/`traceroute` `debug` extended ping `show processes cpu`/`memory` |
+
+### 🖥️ Server Admin — 32 commands & tools
+| Category | Count | Examples |
+|---|---:|---|
+| Web Servers | 5 | `nginx` `nginx site config` `apache2`/`httpd` `certbot` (Let's Encrypt) `openssl s_client` |
+| Databases | 4 | `mysql`/`mariadb` `mysql secure ops` `psql` `pg_dump` |
+| Windows Server | 6 | `Install-WindowsFeature` Active Directory (AD DS) DNS DHCP IIS `Server Manager`/`sconfig` |
+| Containers (Docker) | 4 | `docker run`/`ps` `docker build` `docker exec`/`logs` `docker compose` |
+| Services & Processes | 4 | `systemctl` `cron jobs` `systemd timers` service `user`/`group` |
+| Monitoring & Logs | 5 | `top`/`htop` `df`/`du` `journalctl` `ss`/`netstat` uptime/health checks |
+| Backup & Cron | 4 | `rsync` `tar` `mysqldump`/`pg_dump` backup verification |
+
 ---
 
 ## ⚙️ How it works
@@ -146,7 +176,7 @@ WinTools is a **static site** — the kind you can host on GitHub Pages, Netlify
 
 - **`assets/js/chrome.js`** injects the shared header, footer and navigation, plus small UI helpers (icons, toasts, clipboard).
 
-- **`assets/js/pages/os.js`** is a tiny launcher used by all three OS pages — it detects the current page from its filename and mounts the matching dataset. Adding a new platform is just one data file + one HTML page.
+- **`assets/js/pages/os.js`** is a tiny launcher used by all five content pages — it detects the current page from its filename and mounts the matching dataset. Adding a new platform is just one data file + one HTML page.
 
 Because everything is client-side, the site keeps working with **no internet connection** after the first load, and **nothing you type ever leaves your device**.
 
@@ -189,6 +219,8 @@ WinTools/
 ├── linux.html                     # Linux & Kali command library
 ├── windows.html                   # Windows: Run dialog, CMD, PowerShell, admin
 ├── macos.html                     # macOS Terminal, defaults, Homebrew, dev tools
+├── cisco.html                     # Cisco IOS networking: modes, show, VLAN, routing, ACL
+├── servers.html                   # Server admin: web, DB, Windows Server, Docker, backup
 ├── about.html                     # About, coverage, safety notice, developer
 │
 ├── assets/
@@ -210,10 +242,12 @@ WinTools/
 │       ├── data/
 │       │   ├── linux.js           # 102 Linux & Kali commands
 │       │   ├── windows.js         # 109 Windows commands & tools
-│       │   └── macos.js           # 67 macOS commands & tools
+│       │   ├── macos.js           # 67 macOS commands & tools
+│       │   ├── cisco.js           # 49 Cisco IOS networking commands
+│       │   └── servers.js         # 32 server administration commands
 │       └── pages/
 │           ├── home.js            # Home-page stat counters
-│           └── os.js              # Shared launcher for the 3 OS pages
+│           └── os.js              # Shared launcher for the 5 content pages
 │
 ├── docs/                          # README screenshots
 ├── tests/
@@ -235,7 +269,7 @@ WinTools/
 
 - **Search box** — type anything: a command (`grep`), a task (`recursive`), a flag (`--dport`) or part of an example (`/var/log`). Results update instantly.
 - **Category chips** — click a chip (e.g. *Security (Kali)*, *Run Dialog*, *PowerShell*) to narrow the list. The **All** chip shows everything.
-- **Live counter** — “Showing **N** of 278 commands” updates as you filter.
+- **Live counter** — “Showing **N** of 359 commands” updates as you filter.
 - **Expand / Collapse all** — open every card at once to skim, or close them all.
 - **Copy buttons** — one tap copies any example to the clipboard (with a fallback for older browsers).
 
@@ -279,7 +313,9 @@ Latest run:
 linux:   102 commands   (files 17, text 15, system 20, net 11, pkg 5, disk 7, perm 10, archive 4, sec 13)
 windows: 109 commands   (run 38, cmd 20, ps 16, net 13, files 7, sys 7, admin 8)
 macos:    67 commands   (files 15, text 12, system 11, net 10, pkg 4, mac 11, dev 4)
-TOTAL:   278 commands across 3 platforms
+cisco:    49 commands   (modes 6, show 12, iface 6, vlan 4, routing 4, acl 4, security 6, nat 3, trouble 4)
+servers:  32 commands   (web 5, db 4, win 6, docker 4, svc 4, monitor 5, backup 4)
+TOTAL:   359 commands across 5 platforms
 Problems: none — all checks passed
 ```
 

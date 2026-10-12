@@ -12,7 +12,9 @@
   var PAGES = {
     linux: { data: 'linux', cats: 'linuxCats', p: 'linux' },
     windows: { data: 'windows', cats: 'winCats', p: 'win' },
-    macos: { data: 'macos', cats: 'macCats', p: 'mac' }
+    macos: { data: 'macos', cats: 'macCats', p: 'mac' },
+    cisco: { data: 'cisco', cats: 'ciscoCats', p: 'cisco' },
+    servers: { data: 'servers', cats: 'serverCats', p: 'srv' }
   };
 
   function currentPage() {

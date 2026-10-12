@@ -1139,7 +1139,7 @@ h1, h2, h3, h4 { line-height: 1.3; margin: 0 0 14px; font-weight: 800; font-fami
 .pill-row { display: flex; gap: 8px; flex-wrap: wrap; }
 
 /* ============================= responsive ============================= */
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
   :root { --header-h: 64px; }
   .site-nav {
     position: fixed;
